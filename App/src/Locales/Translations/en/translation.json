@@ -1,0 +1,141 @@
+{
+    "components": {
+        "header": {
+            "home": "HOME",
+            "team": "TEAM",
+            "resources": "RESOURCES",
+            "aboutUs": "ABOUT US",
+            "contact": "CONTACT",
+            "language": "LANGUAGE",
+            "languageEN": "ENGLISH",
+            "languageCN": "中文"
+        },
+        "address": {
+            "subTitle": "GET IN TOUCH",
+            "phone": "+61 431 431 467",
+            "email": "hr@datareachable.com",
+            "address": "Unit 5, 88-90 Belmont Road Glenfield, NSW 2167, Australia"
+        },
+        "footer": {
+            "subTitle1": "About Datareachable",
+            "subTitle2": "Site Links",
+            "subTitle3": "Following Us",
+            "subTitle4": "Get In Touch",
+            "content1": "I'm a paragraph. Click here to add your own text and edit me. I'm a great place for you to tell a story and let your users know a litter more about you. I'm a paragraph. I'm a paragraph. Click here to add your own text and edit me. I'm a great place for you to tell a story and let your users know a litter more about you. I'm a paragraph.",
+            "home": "Home",
+            "team": "Team",
+            "resources": "Resources",
+            "aboutUs": "About Us",
+            "contact": "Contact",
+            "phone": "+61 431 431 467",
+            "email": "query@datareachable.com",
+            "address": "Unit 5, 88-90 Belmont Road Glenfield, NSW 2167, Australia"
+        }
+    },
+    "pages": {
+        "teamPage": {
+            "title": "OUR TEAM",
+            "titleContent": "Our team members are seasoned MR & IT professionals.",
+            "teamDescription": "Professional and rich experience brings excellent products",
+            "description1": "Exploring technology solutions that maximise impact of the business.",
+            "description2": "Driving value by enabling business to become more leaner.",
+            "description3": "Empowering businesses to be more proactive, less reactive.",
+            "subTitle": "ABOUT OUR TEAM",
+            "subContent": "Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.",
+            "button": "ABOUT US",
+            "subTitle2": "JOIN US",
+            "subContent2": "Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Im a paragraph. Im a paragraph. Im a paragraph."
+        },
+        "homepage": {
+            "section1": {
+                "title": "Simple Tool. Powerful Insights.",
+                "paragraph": "We bring state of art web technology to your research.",
+                "btnContent": "CONTACT US"
+            },
+            "section2": {
+                "marketing": "OUR OFFERING",
+                "cost": "SECURED",
+                "responsive": "EFFICIENT",
+                "specialist": "TO THE POINT",
+                "technology": "CUSTOM TECHNOLOGY"
+            },
+            "section3": {
+                "title": "HOW WE HELP BUSINESSES",
+                "block1Title": "SECURED",
+                "block1Content": "We use best price of information security to give our clients confidence that they can rely on our solution to guard their data.",
+                "block2Title": "EFFICIENT",
+                "block2Content": "Via our state of art technology solution, our clients know they can stay competitive and productive.",
+                "block3Title": "TO THE POINT",
+                "block3Content": "We works closely with industry experts to ensure our products  to stay relevant and  address pain point",
+                "block4Title": "Custom Technology",
+                "block4Content": "We build technology to meet your specific requirements."
+            },
+            "section4": {
+                "title": "ABOUT OUR COMPANY",
+                "content": "We are small (for now) and agile, aiming to push the industry forward, writing our story with our clients."
+            }
+        },
+        "resourcesPage": {
+            "section1": {
+                "header": "RESOURCES",
+                "content": "We are building this page..."
+            },
+            "section2": {
+                "header": "Books & Guides",
+                "content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me.",
+                "card1Title": "The Product Manager’s Toolkit",
+                "card1Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card2Title": "Building Your First Visual Product Roadmap",
+                "card2Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card3Title": "BACKLOG REFINEMENT",
+                "card3Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you."
+            },
+            "section3": {
+                "header": "Articles",
+                "content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me.",
+                "card1Title": "The Product Manager’s Toolkit",
+                "card1Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card2Title": "Building Your First Visual Product Roadmap",
+                "card2Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card3Title": "BACKLOG REFINEMENT",
+                "card3Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you."
+            },
+            "section4": {
+                "header": "Videos & Webinars",
+                "content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me.",
+                "card1Title": "The Product Manager’s Toolkit",
+                "card1Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card2Title": "Building Your First Visual Product Roadmap",
+                "card2Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.",
+                "card3Title": "BACKLOG REFINEMENT",
+                "card3Content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you."
+            },
+            "section5": {
+                "header": "Want to know more ?",
+                "content": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me."
+            }
+        },
+        "aboutUsPage": {
+            "title": "ABOUT US",
+            "titleContent": "dataReachable is a tech start-up specialised in providing software solution for market and social research. Our mission is to explore new frontier and bring values to our customers.",
+
+            "subTitle": "OUR CORE VALUES",
+            "subContent": "Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.",
+            "tag1Label": "STAY HUNGRY",
+            "tag1Content": "Via pushing ourselves forward.",
+            "tag2Label": "STAY PROFESSIONAL",
+            "tag2Content": "Via delivering high-quality work and products.",
+            "tag3Label": "STAY TOGETHER",
+            "tag3Content": "Via growing with our clients and teams.",
+            "section2Title": "OUR STORY",
+            "section2Content": "Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. /nClick here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me./nIm a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.",
+            "section3Title": "OUR TEAM",
+            "section3Content": "Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me. Im a paragraph. Click here to add your own text and edit me. Im a great place for you to tell a story and let your users know a little more about you. Im a paragraph. Click here to add your own text and edit me.",
+            "section3Button": "OUR TEAM"
+        },
+        "contactPage": {
+            "title": "CONTACT US",
+            "titleContent": "Here are simple ways to get in touch with us."
+        }
+    }
+}

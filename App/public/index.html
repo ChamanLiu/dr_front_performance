@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 10px;">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CODELAB: Add link rel manifest -->
+        <!-- CODELAB: Add iOS meta tags and icons -->
+        <!-- CODELAB: Add description here -->
+        <!-- CODELAB: Add meta theme-color -->
+        <!-- CODELAB: Add iOS meta tags and icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="DataReachable" />
+        <meta name="description" content="DataReachable" />
+        <meta name="theme-color" content="#2F3BA2" />
+        <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.23.6/antd.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.23.6/antd-with-locales.js.map"
+        />
+        <title>dataReachable</title>
+    </head>
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // window.addEventListener('load', () => {
+                //   navigator.serviceWorker
+                //     .unregister('./service-wroker.js')
+                //     .then(unregistration => {
+                //       console.log('SW unregistered: ', unregistration);
+                //     })
+                //     .catch(registrationError => {
+                //       console.log('SW registration failed: ', registrationError);
+                //     });
+                // });
+                navigator.serviceWorker
+                    .getRegistrations()
+                    .then(function (registrations) {
+                        for (let registration of registrations) {
+                            registration.unregister();
+                        }
+                    })
+                    .catch(function (err) {
+                        console.log('Service Worker registration failed: ', err);
+                    });
+            }
+        </script>
+    </body>
+</html>
