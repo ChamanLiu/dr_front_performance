@@ -14,7 +14,11 @@
 .loadingFormCol {
     width: 100%;
 }
-
+.loadingWrapper_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .loadingPageWrapper {
     margin: auto;
     width: 90%;

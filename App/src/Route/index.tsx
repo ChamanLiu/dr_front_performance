@@ -11,7 +11,9 @@ import style from './style.scss';
 
 /* <------------------------------------ **** Lazy Loading all the pages START **** ------------------------------------ */
 
-const HomePage = React.lazy(() => import(/* webpackChunkName: 'homepage' */ '../Pages/HomePage'));
+const HomePage = React.lazy(
+    () => import(/* webpackChunkName: 'homepage' */ '../PageLayouts/MainLayout'),
+);
 
 /* <------------------------------------ **** Lazy Loading all the pages END **** ------------------------------------ */
 
@@ -21,8 +23,8 @@ const RootRouter = (): JSX.Element => {
             fallback={
                 /* <------------------------------------ **** Loading Animation START **** ------------------------------------ */
                 <div>
-                    <div>
-                        <Row className={style.loadingWrapper} type="flex" align="middle">
+                    <div className={style.loadingWrappe_container}>
+                        <Row className={style.loadingWrapper} align="middle">
                             <Col className={style.loadingFormCol}>
                                 <div className={style.loadingPageWrapper}>
                                     <div className={style.loadingPageTitle}>DataReachable</div>
