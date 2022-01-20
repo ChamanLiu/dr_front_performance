@@ -13,7 +13,7 @@ import XLSX, { CellObject } from 'xlsx';
 /** This section will include all the interface for this tsx file */
 export interface TableType {
     header: Array<string> | undefined;
-    results: unknown[];
+    results: Array<Record<string, string>>;
 }
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
@@ -21,7 +21,7 @@ const Performance = (): JSX.Element => {
     /* <------------------------------------ **** STATE START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
     // const [tableData, setTableData] = useState<TableType>();
-    const [tableData, setTableData] = useState<Array<unknown>>([]);
+    const [tableData, setTableData] = useState<Array<Record<string, string>>>([]);
     /* <------------------------------------ **** STATE END **** ------------------------------------ */
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
@@ -59,7 +59,7 @@ const Performance = (): JSX.Element => {
                 const firstSheetName = workbook.SheetNames[0];
                 const worksheet = workbook.Sheets[firstSheetName];
                 const header = getHeaderRow(worksheet);
-                const results = XLSX.utils.sheet_to_json(worksheet);
+                const results: Array<Record<string, string>> = XLSX.utils.sheet_to_json<Record<string, string>>(worksheet);
                 const tableData = {
                     header,
                     results,
@@ -72,8 +72,8 @@ const Performance = (): JSX.Element => {
         });
     };
     const handleChangeInput = (e: BaseSyntheticEvent) => {
-        const files = e.target.files;
-        const rawFile = files[0];
+        const files = (e.target as HTMLInputElement).files;
+        const rawFile = files && files[0];
         if (rawFile !== null) {
             readerData(rawFile);
         }
@@ -91,17 +91,51 @@ const Performance = (): JSX.Element => {
         };
         var newArr = results.map((item) => {
             var userInfo = {};
-            Object.keys(item as string).forEach((key) => {
-                userInfo[userRelations[key]] = (item as string)[key];
+            Object.keys(item).forEach((key) => {
+                userInfo[userRelations[key]] = item[key];
             });
             return userInfo;
         });
-        newArr.unshift({
-            任务类型: '雇员姓名',
-            任务名称: 'lcm',
-        });
+        // newArr.unshift({
+        //     任务类型: '雇员姓名',
+        //     任务名称: 'lcm',
+        // });
         setTableData([...newArr])
     };
+    // 转化excel的日期格式
+    const formatDate = (numb, format?) => {
+        const time = new Date((numb - 1) * 24 * 3600000 + 1)
+        time.setFullYear(time.getFullYear() - 70)
+        const year = time.getFullYear() + ''
+        const month = time.getMonth() + 1 + ''
+        const date = time.getDate() - 1 + ''
+        if (format && format.length === 1) {
+            return year + format + month + format + date
+        }
+        return year + (Number(month) < 10 ? '0' + month : month) + (Number(date) < 10 ? '0' + date : date)
+    }
+    // 将表头数据和数据进行对应
+    // [{}]  =>   [[]]
+    const formatJson = (headers, rows) => {
+        /**
+         * 筛选用户所选中的数据
+         */
+        /**
+         * 格式化数据
+         */
+        return rows.map(item => {
+            // item是一个对象  { mobile: 132111,username: '张三'  }
+            // ["手机号", "姓名", "入职日期" 。。]
+            return Object.keys(headers).map(key => {
+                // 需要判断 字段
+                if (headers[key] === '约定完成时间' || headers[key] === '实际完成时间') {
+                    // 格式化日期
+                    return formatDate(item[headers[key]])
+                }
+                return item[headers[key]]
+            })
+        })
+    }
     const exportData = () => {
         const headers = {
             '任务类型': '任务类型',
@@ -124,18 +158,14 @@ const Performance = (): JSX.Element => {
         }
         // 导出excel
         import('../../vendor/Export2Excel').then(async excel => {
-            //  excel是引入文件的导出对象
-            // 导出  header从哪里来
-            // data从哪里来
-            // 现在没有一个接口获取所有的数据
-            // 获取员工的接口 页码 每页条数    100   1 10000
-            // const { rows } = await getEmployeeList({ page: 1, size: this.page.total })
-            console.log('data', tableData)
+
+            const data: Array<string> = formatJson(headers, tableData)
+            console.log('data', data)
             // const multiHeader = [['任务类型', '任务名称', '', '', '', '', '主管评任务质量']]
             // const merges = ['A1:A2', 'B1:F1', 'G1:G2'] // 合并单元格
             excel.export_json_to_excel({
                 header: Object.keys(headers),
-                data: tableData,
+                data: data,
                 filename: '任务完成绩效',
             })
         })

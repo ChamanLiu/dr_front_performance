@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { saveAs } from 'file-saver'
-import XLSX from 'xlsx'
+import XLSX, { BookType } from 'xlsx'
 
 function generateArray(table) {
-  var out: Array<unknown> = [];
+  var out: Array<Array<string>> = [];
   var rows = table.querySelectorAll('tr');
   var ranges: Array<{
     s,
@@ -45,7 +45,6 @@ function generateArray(table) {
 
       //Handle Value
       outRow.push(cellValue !== "" ? cellValue : null);
-
       //Handle Colspan
       if (colspan)
         for (var k = 0; k < colspan - 1; ++k) outRow.push('');
@@ -55,13 +54,13 @@ function generateArray(table) {
   return [out, ranges];
 };
 
-function datenum(v, date1904?) {
-  if (date1904) v += 1462;
-  var epoch = Date.parse(v);
+function datenum(v: Date) {
+  // if (date1904) v = v + 1462;
+  var epoch = Date.parse(v.toString());
   return (epoch - Number(new Date(Date.UTC(1899, 11, 30)))) / (24 * 60 * 60 * 1000);
 }
 
-function sheet_from_array_of_arrays(data, opts) {
+function sheet_from_array_of_arrays(data: Array<string | string[]>) {
   var ws = {};
   var range = {
     s: {
@@ -80,12 +79,13 @@ function sheet_from_array_of_arrays(data, opts) {
       if (range.e.r < R) range.e.r = R;
       if (range.e.c < C) range.e.c = C;
       var cell: {
-        v: any,
+        v: Date | string | number,
         t: string,
-        z: any
+        z: string
       } = {
         v: data[R][C],
-        t: ''
+        t: '',
+        z: ''
       };
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({
@@ -106,13 +106,19 @@ function sheet_from_array_of_arrays(data, opts) {
   if (range.s.c < 10000000) ws['!ref'] = XLSX.utils.encode_range(range);
   return ws;
 }
+class Workbook {
+  SheetNames: string[] = []
+  Sheets: Record<string, {}> = {}
+  constructor() {
+    if (!(this instanceof Workbook)) {
+      return new Workbook();
 
-function Workbook() {
-  if (!(this instanceof Workbook)) return new Workbook();
-  this.SheetNames = [];
-  this.Sheets = {};
+    }
+    this.SheetNames = [];
+    this.Sheets = {};
+  }
+
 }
-
 function s2ab(s) {
   var buf = new ArrayBuffer(s.length);
   var view = new Uint8Array(buf);
@@ -120,56 +126,72 @@ function s2ab(s) {
   return buf;
 }
 
-export function export_table_to_excel(id) {
-  var theTable = document.getElementById(id);
-  var oo = generateArray(theTable);
-  var ranges = oo[1];
+// export function export_table_to_excel(id) {
+//   var theTable = document.getElementById(id);
+//   var oo = generateArray(theTable);
+//   var ranges = oo[1];
 
-  /* original data */
-  var data = oo[0];
-  var ws_name = "SheetJS";
+//   /* original data */
+//   var data = oo[0];
+//   var ws_name = "SheetJS";
+//   console.log('');
 
-  var wb = new Workbook(),
-    ws = sheet_from_array_of_arrays(data);
+//   var wb = new Workbook(),
+//     ws = sheet_from_array_of_arrays(data);
 
-  /* add ranges to worksheet */
-  // ws['!cols'] = ['apple', 'banan'];
-  ws['!merges'] = ranges;
+//   /* add ranges to worksheet */
+//   // ws['!cols'] = ['apple', 'banan'];
+//   ws['!merges'] = ranges;
 
-  /* add worksheet to workbook */
-  wb.SheetNames.push(ws_name);
-  wb.Sheets[ws_name] = ws;
+//   /* add worksheet to workbook */
+//   wb.SheetNames.push(ws_name);
+//   wb.Sheets[ws_name] = ws;
 
-  var wbout = XLSX.write(wb, {
-    bookType: 'xlsx',
-    bookSST: false,
-    type: 'binary'
-  });
+//   var wbout = XLSX.write(wb, {
+//     bookType: 'xlsx',
+//     bookSST: false,
+//     type: 'binary'
+//   });
 
-  saveAs(new Blob([s2ab(wbout)], {
-    type: "application/octet-stream"
-  }), "test.xlsx")
+//   saveAs(new Blob([s2ab(wbout)], {
+//     type: "application/octet-stream"
+//   }), "test.xlsx")
+// }
+interface exportExcel {
+  header: Array<string>,
+  data: Array<string | string[]>,
+  filename: string,
+  autoWidth?: boolean,
+  bookType?: BookType
 }
-
 export function export_json_to_excel({
-  // multiHeader = [],
   header,
   data,
   filename,
-  // merges = [],
   autoWidth = true,
   bookType = 'xlsx'
-} = {}) {
+}: exportExcel) {
   /* original data */
   filename = filename || 'excel-list'
   data = [...data]
   data.unshift(header);
-  var ws_name = "SheetJS";
-  var wb = new Workbook(),
+  const ws_name = "SheetJS";
+  // const wb = new Workbook(),
+  //   ws = sheet_from_array_of_arrays(data);
+
+  interface WB {
+    SheetNames: string[],
+    Sheets: Record<string, any>
+  }
+  const wb: WB = {
+    SheetNames: [],
+    Sheets: {}
+  },
     ws = sheet_from_array_of_arrays(data);
+
   if (autoWidth) {
     /*设置worksheet每列的最大宽度*/
-    const colWidth = data.map(row => row.map(val => {
+    const colWidth = data.map(row => (row as string[]).map(val => {
       /*先判断是否为null/undefined*/
       if (val == null) {
         return {
@@ -204,7 +226,7 @@ export function export_json_to_excel({
   wb.Sheets[ws_name] = ws;
 
   var wbout = XLSX.write(wb, {
-    bookType: bookType,
+    bookType: bookType as BookType | undefined,
     bookSST: false,
     type: 'binary'
   });
